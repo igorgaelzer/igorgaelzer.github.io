@@ -1,0 +1,52 @@
+body {
+	font-family: Helvetica Neue;
+}
+
+h1 {
+	font-weight: normal;
+	font-size: 24px;
+	margin-top: 60px;
+	margin-left: 25px;
+}
+
+#logo {
+	font-family: helvetica Neue;
+	font-size: 85px;
+	line-height: 75px;
+	width: 500px;
+	margin: auto;
+	vertical-align: auto;
+	color: white;
+}
+
+.header {
+	background-color: #222;
+	padding: 200px 0 250px;
+}
+
+.zone {
+	margin: 20px 0;
+}
+
+.leftbar {
+	width: 250px;
+	height: 100%;
+	position: absolute;
+	margin-left: 20px;
+}
+
+.content {
+	margin-left: 250px;
+}
+
+.participant {
+	width: 150px;
+	float: left;
+	text-align: center;
+}
+
+.participant > img {
+	width: 100px;
+	border-radius: 50px;
+	margin-top: 30px;
+}
