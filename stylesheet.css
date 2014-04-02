@@ -24,6 +24,16 @@ h1 {
 	padding: 200px 0 250px;
 }
 
+.social {
+	position: absolute;
+	top: 50px;
+	right: 60px;
+}
+
+.social > img {
+	margin-left: 10px;
+}
+
 .zone {
 	margin: 20px 0;
 }
