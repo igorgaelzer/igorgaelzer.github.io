@@ -32,6 +32,10 @@ p {
 	color: white;
 }
 
+object {
+	margin: auto;
+}
+
 .header {
 	background-color: #222;
 	padding: 200px 0 250px;
