@@ -5,8 +5,14 @@ body {
 h1 {
 	font-weight: normal;
 	font-size: 24px;
-	margin-top: 60px;
-	margin-left: 25px;
+	margin: -4px 0 0 20px;
+	color: #222;
+}
+
+h2 {
+	font-weight: normal;
+	font-size: 20px;
+	margin: 0;
 }
 
 #logo {
@@ -35,14 +41,25 @@ h1 {
 }
 
 .zone {
-	margin: 20px 0;
+	margin-top: 20px;
+	overflow: hidden;
+	padding: 50px 0;
+}
+
+.greybg {
+	background-color: #eee;
 }
 
 .leftbar {
 	width: 250px;
 	height: 100%;
 	position: absolute;
-	margin-left: 20px;
+}
+
+.box50 {
+	width: 50%;
+	float: left;
+	padding: -20px;
 }
 
 .content {
@@ -58,5 +75,4 @@ h1 {
 .participant > img {
 	width: 100px;
 	border-radius: 50px;
-	margin-top: 30px;
 }
