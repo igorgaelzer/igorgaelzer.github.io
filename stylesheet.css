@@ -15,6 +15,7 @@ h2 {
 	font-weight: normal;
 	font-size: 20px;
 	margin: 0;
+	text-decoration: underline;
 }
 
 p {
@@ -59,7 +60,7 @@ p {
 }
 
 .greybg {
-	background-color: #eee;
+	background-color: #EFEFEF;
 }
 
 .leftbar {
