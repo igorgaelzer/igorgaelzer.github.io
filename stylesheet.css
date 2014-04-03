@@ -26,6 +26,16 @@ p {
 	line-height: 28px;
 }
 
+li {
+	list-style: none;
+}
+
+header {
+	background-color: #222;
+	padding: 200px 0 250px;
+	margin-bottom: 30px;
+}
+
 #logo {
 	font-family: helvetica Neue;
 	font-size: 85px;
@@ -34,13 +44,6 @@ p {
 	margin: auto;
 	vertical-align: auto;
 	color: white;
-}
-
-
-.header {
-	background-color: #222;
-	padding: 200px 0 250px;
-	margin-bottom: 30px;
 }
 
 .social {
@@ -53,7 +56,7 @@ p {
 	margin-left: 10px;
 }
 
-.zone {
+section {
 	margin-top: 20px;
 	overflow: hidden;
 	padding: 50px 0;
