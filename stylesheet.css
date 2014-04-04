@@ -28,6 +28,7 @@ p {
 
 li {
 	list-style: none;
+	display: inline;
 }
 
 header {
@@ -52,7 +53,7 @@ header {
 	right: 60px;
 }
 
-.social > img {
+.social > li {
 	margin-left: 10px;
 }
 
