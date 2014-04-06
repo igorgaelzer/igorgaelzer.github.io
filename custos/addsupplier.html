@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sistema de formação de preços</title>
+	<meta name="viewport" content="width=device-width, inicial-scale=1.0">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+	<div class="navbar navbar-inverse navbar-static-top">
+		<div class="container">
+			<a href="index.html" class="navbar-brand">Sistema de formação de preços</a>
+			<button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+				<span class= "icon-bar"></span>
+				<span class= "icon-bar"></span>
+				<span class= "icon-bar"></span>
+			</button>
+			<div class="collapse navbar-collapse navHeaderCollapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li class="active"><a href="#"><span class="glyphicon glyphicon-user"></span> Fornecedores</a> </li>
+					<li><a href="#"><span class="glyphicon glyphicon-leaf"></span> Materiais</a> </li>
+					<li><a href="#"><span class="glyphicon glyphicon-tags"></span> Produtos</a> </li>
+					<li><a href="#"><span class="glyphicon glyphicon-refresh"></span> Multiplicadores</a> </li>
+					<li><a href="#"><span class="glyphicon glyphicon-list-alt"></span> Listas de preço</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div id="title-bar" class="page-header row">
+			<div class="col-lg-6">
+				<h1>Adicionar fornecedor</h1>
+			</div>
+		</div>
+		<p>Preencha ou edite os campos abaixo e depois clique em <strong>Salvar</strong>.</p><br>
+	</div>
+	<div class="container">
+		<form>
+			<div class="row">
+				<div class="form-group col-md-6">
+					<label for="referencia">Empresa</label>
+					<input type="text" name="company_name" value="" class="form-control" required="required">
+				</div>
+				<div class="form-group col-md-6">
+					<label for="referencia">Cidade / Estado</label>
+					<input type="text" name="company_name" value="" class="form-control" required="required">
+				</div>
+				<div class="form-group col-md-6">
+					<label for="referencia">Email</label>
+					<input type="text" name="company_name" value="" class="form-control" required="required">
+				</div>
+				<div class="form-group col-md-6">
+					<label for="referencia">Telefone</label>
+					<input type="text" name="company_name" value="" class="form-control" required="required">
+				</div>
+				<div class="form-group col-md-6">
+					<label for="referencia">Nome do vendedor</label>
+					<input type="text" name="company_name" value="" class="form-control" required="required">
+				</div>
+			</div>
+		</form>
+		<a href="index.html" class="btn btn-success" id="header-btn">Salvar</a>
+	</div> <!-- Close container -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+</body>
+</html>
