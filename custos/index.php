@@ -10,7 +10,7 @@
 <body>
 	<div class="navbar navbar-inverse navbar-static-top">
 		<div class="container">
-			<a href="index.html" class="navbar-brand">Sistema de formação de preços</a>
+			<a href="index.php" class="navbar-brand">Sistema de formação de preços</a>
 			<button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
 				<span class= "icon-bar"></span>
 				<span class= "icon-bar"></span>
@@ -18,7 +18,7 @@
 			</button>
 			<div class="collapse navbar-collapse navHeaderCollapse">
 				<ul class="nav navbar-nav navbar-right">
-					<li class="active"><a href="#"><span class="glyphicon glyphicon-user"></span> Fornecedores</a> </li>
+					<li class="active"><a href="index.php"><span class="glyphicon glyphicon-user"></span> Fornecedores</a> </li>
 					<li><a href="#"><span class="glyphicon glyphicon-inbox"></span> Materiais</a> </li>
 					<li><a href="#"><span class="glyphicon glyphicon-tags"></span> Produtos</a> </li>
 					<li><a href="#"><span class="glyphicon glyphicon-refresh"></span> Multiplicadores</a> </li>
@@ -33,7 +33,7 @@
 				<h1><span class="glyphicon glyphicon-user"></span> Fornecedores</h1>
 			</div>
 			<div class="col-lg-6">	
-				<a href="addsupplier.html" type="button" id="header-btn" class="btn btn-success"><span class="glyphicon glyphicon-plus"></span> Adicionar fornecedor</a>
+				<a href="addsupplier.php" type="button" id="header-btn" class="btn btn-success"><span class="glyphicon glyphicon-plus"></span> Adicionar fornecedor</a>
 			</div>
 		</div>
 		<div class="row">
@@ -51,86 +51,47 @@
 		<table class="table table-hover">
 			<thead>
 			<tr>
-				<th>Referência</th>
-				<th>Descrição</th>
-				<th>Marca</th>
-				<th>Cliente</th>
-				<th>Custo</th>
+				<th>Empresa</th>
+				<th>Cidade</th>
+				<th>Email</th>
+				<th>Telefone</th>
+				<th>Contato</th>
 				<th>Opções</th>
 			</tr>
 			</thead>
-			<tr>
-				<td><a href="addsupplier.html">NW001</a></td>
-				<td>Pasta masculina de couro para notebook</td>
-				<td>Nordweg</td>
-				<td></td>
-				<td>R$96,42</td>
-				<td>Excluir | Duplicar</td>	
-			</tr>
-			<tr>
-				<td>NW012</td>
-				<td>Mochila masculina de couro para notebook</td>
-				<td>Nordweg</td>
-				<td></td>
-				<td>R$103,65</td>
-				<td>Excluir | Duplicar</td>
-			</tr>
-			<tr>
-				<td>NW055</td>
-				<td>Mochila de couro legítimo para fotógrafos</td>
-				<td>Nordweg</td>
-				<td></td>
-				<td>R$132,65</td>
-				<td>Excluir | Duplicar</td>
-			</tr>
-			<tr>
-				<td>NW001</td>
-				<td>Pasta masculina de couro para notebook</td>
-				<td>Nordweg</td>
-				<td></td>
-				<td>R$96,42</td>
-				<td>Excluir | Duplicar</td>
-			</tr>
-			<tr>
-				<td>NW012</td>
-				<td>Mochila masculina de couro para notebook</td>
-				<td>Nordweg</td>
-				<td></td>
-				<td>R$103,65</td>
-				<td>Excluir | Duplicar</td>
-			</tr>
-			<tr>
-				<td>NW055</td>
-				<td>Mochila de couro legítimo para fotógrafos</td>
-				<td>Nordweg</td>
-				<td></td>
-				<td>R$132,65</td>
-				<td>Excluir | Duplicar</td>
-			</tr>
-			<tr>
-				<td>NW001</td>
-				<td>Pasta masculina de couro para notebook</td>
-				<td>Nordweg</td>
-				<td></td>
-				<td>R$96,42</td>
-				<td>Excluir | Duplicar</td>
-			</tr>
-			<tr>
-				<td>NW012</td>
-				<td>Mochila masculina de couro para notebook</td>
-				<td>Nordweg</td>
-				<td></td>
-				<td>R$103,65</td>
-				<td>Excluir | Duplicar</td>
-			</tr>
-			<tr>
-				<td>NW055</td>
-				<td>Mochila de couro legítimo para fotógrafos</td>
-				<td>Nordweg</td>
-				<td></td>
-				<td>R$132,65</td>
-				<td>Excluir | Duplicar</td>
-			</tr>
+
+
+			<?php
+
+				$cost = mysql_connect('localhost' , 'root' , 'root') or die(mysql_error() );
+
+				mysql_select_db('product_cost' , $cost);
+
+				$sql = "SELECT * FROM suppliers";
+
+				$result = mysql_query($sql , $cost);
+
+				// -------------- START OF DYNAMIC DATA IN TABLE -------------- 
+
+				while ($row = mysql_fetch_array($result)) {
+			
+					$company = $row['company'];
+					$location = $row['location'];
+					$email = $row['email'];
+					$phone = $row['phone'];
+					$contact = $row['contact'];
+
+					echo "<tr>";
+					echo "<td>$company</td>";
+					echo "<td>$location</td>";
+					echo "<td>$email</td>";
+					echo "<td>$phone</td>";
+					echo "<td>$contact</td>";
+					echo "<td>Excluir | Duplicar</td>";
+					echo "</tr>";
+				}
+
+			?>
 		</table>
 		<ul class="pagination pull-right">
 			<li><a href="#">&laquo;</a></li>
@@ -146,7 +107,8 @@
 			<button type="button" class="btn btn-default">Excel</button>
 			<button type="button" class="btn btn-default">PDF</button>
 		</div>
-	</div>
+	</div> <!-- End of container -->
+
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="js/bootstrap.js"></script>
 </body>

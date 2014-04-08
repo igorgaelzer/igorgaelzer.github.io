@@ -10,7 +10,7 @@
 <body>
 	<div class="navbar navbar-inverse navbar-static-top">
 		<div class="container">
-			<a href="index.html" class="navbar-brand">Sistema de formação de preços</a>
+			<a href="index.php" class="navbar-brand">Sistema de formação de preços</a>
 			<button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
 				<span class= "icon-bar"></span>
 				<span class= "icon-bar"></span>
@@ -18,7 +18,7 @@
 			</button>
 			<div class="collapse navbar-collapse navHeaderCollapse">
 				<ul class="nav navbar-nav navbar-right">
-					<li class="active"><a href="#"><span class="glyphicon glyphicon-user"></span> Fornecedores</a> </li>
+					<li class="active"><a href="index.php"><span class="glyphicon glyphicon-user"></span> Fornecedores</a> </li>
 					<li><a href="#"><span class="glyphicon glyphicon-inbox"></span> Materiais</a> </li>
 					<li><a href="#"><span class="glyphicon glyphicon-tags"></span> Produtos</a> </li>
 					<li><a href="#"><span class="glyphicon glyphicon-refresh"></span> Multiplicadores</a> </li>
@@ -36,35 +36,55 @@
 		<p>Preencha ou edite os campos abaixo e depois clique em <strong>Salvar</strong>.</p><br>
 	</div>
 	<div class="container">
-		<form>
+		<form method="POST">
 			<div class="row">
 				<div class="form-group col-md-6">
-					<label for="referencia">Empresa</label>
-					<input type="text" name="company_name" value="" class="form-control" required="required">
+					<label for="company">Empresa</label>
+					<input type="text" action="" type="text" name="company" class="form-control" required="required">
 				</div>
 				<div class="form-group col-md-6">
-					<label for="referencia">Cidade / Estado</label>
-					<input type="text" name="company_name" value="" class="form-control" required="required">
+					<label for="location">Cidade / Estado</label>
+					<input type="text" name="location" class="form-control">
 				</div>
 				<div class="form-group col-md-6">
-					<label for="referencia">Email</label>
-					<input type="text" name="company_name" value="" class="form-control" required="required">
+					<label for="email">Email</label>
+					<input type="text" name="email" class="form-control">
 				</div>
 				<div class="form-group col-md-6">
-					<label for="referencia">Telefone</label>
-					<input type="text" name="company_name" value="" class="form-control" required="required">
+					<label for="phone">Telefone</label>
+					<input type="text" name="phone" class="form-control">
 				</div>
 				<div class="form-group col-md-6">
-					<label for="referencia">Nome do vendedor</label>
-					<input type="text" name="company_name" value="" class="form-control" required="required">
+					<label for="contact">Nome do vendedor</label>
+					<input type="text" name="contact" class="form-control">
 				</div>
 			</div>
+			<div style="float: right; text-align: right">
+				<a href="#">Cancelar</a> ou 
+				<input type="submit" class="btn btn-success" value="Salvar">
+			</div>
 		</form>
-		<div style="float: right; text-align: right">
-			<a href="#">Cancelar</a> ou 
-			<a href="index.html" class="btn btn-success">Salvar</a>
-		</div>
+		
 	</div> <!-- Close container -->
+
+	<?php
+
+		$company = $_POST['company'];
+		$location = $_POST['location'];
+		$email = $_POST['email'];
+		$phone = $_POST['phone'];
+		$contact = $_POST['contact'];
+
+		$cost = mysql_connect('localhost' , 'root' , 'root') or die(mysql_error() );
+		
+		mysql_select_db('product_cost' , $cost);
+		
+		$sql = "INSERT INTO suppliers (company, location, email, phone, contact) VALUES ('$company' , '$location' , '$email' , '$phone' , '$contact')";
+		
+		mysql_query($sql , $cost);
+
+	?>
+
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="js/bootstrap.js"></script>
 </body>
