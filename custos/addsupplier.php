@@ -75,13 +75,17 @@
 		$phone = $_POST['phone'];
 		$contact = $_POST['contact'];
 
-		$cost = mysql_connect('localhost' , 'root' , 'root') or die(mysql_error() );
-		
-		mysql_select_db('product_cost' , $cost);
-		
-		$sql = "INSERT INTO suppliers (company, location, email, phone, contact) VALUES ('$company' , '$location' , '$email' , '$phone' , '$contact')";
-		
-		mysql_query($sql , $cost);
+		if (isset($_POST['company']) {
+
+			$cost = mysql_connect('localhost' , 'root' , 'root') or die(mysql_error() );
+			
+			mysql_select_db('product_cost' , $cost);
+			
+			$sql = "INSERT INTO suppliers (company, location, email, phone, contact) VALUES ('$company' , '$location' , '$email' , '$phone' , '$contact')";
+			
+			mysql_query($sql , $cost);
+
+		}
 
 	?>
 
