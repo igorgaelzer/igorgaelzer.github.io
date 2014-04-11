@@ -1,3 +1,30 @@
+<?php
+
+		$company = $_POST['company'];
+		$location = $_POST['location'];
+		$email = $_POST['email'];
+		$phone = $_POST['phone'];
+		$contact = $_POST['contact'];
+
+		if (isset($_POST['company'])) {
+
+			$cost = mysql_connect('localhost' , 'root' , 'root') or die(mysql_error() );
+			
+			mysql_select_db('product_cost' , $cost);
+			
+			$sql = "INSERT INTO suppliers (company, location, email, phone, contact) VALUES ('$company' , '$location' , '$email' , '$phone' , '$contact')";
+			
+			mysql_query($sql , $cost);
+
+			// REDIRECIONANDO PRA PÁGINA DE FORNECEDORES
+
+			header("Location: index.php");
+
+
+		}
+
+	?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -66,28 +93,6 @@
 		</form>
 		
 	</div> <!-- Close container -->
-
-	<?php
-
-		$company = $_POST['company'];
-		$location = $_POST['location'];
-		$email = $_POST['email'];
-		$phone = $_POST['phone'];
-		$contact = $_POST['contact'];
-
-		if (isset($_POST['company']) {
-
-			$cost = mysql_connect('localhost' , 'root' , 'root') or die(mysql_error() );
-			
-			mysql_select_db('product_cost' , $cost);
-			
-			$sql = "INSERT INTO suppliers (company, location, email, phone, contact) VALUES ('$company' , '$location' , '$email' , '$phone' , '$contact')";
-			
-			mysql_query($sql , $cost);
-
-		}
-
-	?>
 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="js/bootstrap.js"></script>
