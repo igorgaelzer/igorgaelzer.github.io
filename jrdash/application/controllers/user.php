@@ -19,29 +19,30 @@
 		public function insert()
 		{
 			$result = $this->user_model->insert([
-					'login' => 'igorgaelzer2'
+					'login' => 'igorgaelzer'
 				]);
 			
 			print_r($result);
 		}
 
 
-		public function update()
-		{
-			$result = $this->user_model->update([
-					'login' => 'itgaelzer'
-				] , 5);
+	// 	public function update()
+	// 	{
+	// 		$result = $this->user_model->update([
+	// 				'login' => 'itgaelzer'
+	// 			] , 5);
 
-			print_r($result);
-		}
+	// 		print_r($result);
+	// 	}
 
 
-		public function delete()
-		{
-			$result = $this->user_model->delete(1);
+	// 	public function delete()
+	// 	{
+	// 		$result = $this->user_model->delete(1);
 
-			print_r($result)
-		}
+	// 		print_r($result)
+	// 	}
+	
 	}
 
 ?>

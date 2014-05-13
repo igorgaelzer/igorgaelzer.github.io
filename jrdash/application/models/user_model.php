@@ -22,7 +22,6 @@
 		public function insert($data)
 		{
 			$this->insert('user', $data);
-
 			return $this->db->insert_id();
 		}
 

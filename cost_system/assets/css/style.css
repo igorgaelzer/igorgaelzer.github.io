@@ -1,0 +1,107 @@
+
+.form-signin {
+  max-width: 330px;
+  padding: 25px;
+  margin: 10px auto;
+}
+
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+
+.form-signin .checkbox {
+  font-weight: normal;
+}
+
+.form-signin .form-control {
+  position: relative;
+  font-size: 16px;
+  height: auto;
+  padding: 10px;
+  
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+
+.form-signin input {
+  margin-bottom: 10px;  
+}
+
+.form-signin h2 {
+  margin-top: 1px;
+}
+
+#header-btns {
+  text-align: right;
+  margin-top: 25px;
+}
+
+#title-bar {
+  margin-top: -10px;
+  margin-bottom: 1em;  
+}
+
+.main-content {
+  position: relative;
+  padding: 70px 15px 0;
+  margin-bottom: 50px;
+}
+
+.form-column {
+  padding: 10px;
+}
+
+.box-multiplicador {
+  text-align: center;  
+  width: 170px;
+  margin-right: 200px;
+  margin-top: 80px;
+}
+
+.img-modelo {
+  text-align: center;
+  margin-left: -40px;
+  margin-top: 20px;
+}
+
+.multiplicadores {
+  margin-top:50px;
+}
+
+.lista-modelos {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.lista-modelos table body{
+display:block;
+height:80px;
+overflow:auto;
+}
+
+#items-sortable { list-style-type: none; margin: 0; padding: 0; }
+
+#top-table { padding-top: 20px; margin-bottom: 60px; margin-right: -15px; margin-left: -15px; }
+#pagination-table { margin-top: 30px;}
+
+.table a,
+.table a:hover,
+.table a:visited { color: #768592; }
+
+.table a.btn,
+.table a.btn:hover,
+.table a.btn:visited { color: #FFFFFF; }
+
+.delete-register,
+.delete-register:hover,
+.delete-register:visited { color: red !important; }
+
+.total-modelos {
+  padding-left: 25px;
+}
