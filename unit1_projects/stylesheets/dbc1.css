@@ -1,0 +1,32 @@
+body {
+	background-color: #DDD;
+	font-family: Helvetica;
+	width: 800px;
+	margin: 50px auto;
+}
+
+h1, h2, h3 {
+	color: #444;
+}
+
+th {
+	background-color: #444;
+	color: white;
+}
+
+td {
+	background-color: #AAA;
+}
+
+a {
+	color: #336699;
+}
+
+.center {
+	text-align: center;
+}
+
+#citytable {
+	width: 400px;
+	margin: 40px auto 40px;
+}
