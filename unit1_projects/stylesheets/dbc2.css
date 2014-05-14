@@ -1,0 +1,36 @@
+body {
+	width: 1000px;
+	margin: auto;
+}
+
+header {
+	background-color: #FF7A00;
+	height: 120px;
+	margin: 0;
+}
+
+aside {
+	background-color: #03899C;
+	width: 250px;
+	height: 500px;
+	display: inline-block;
+	margin: 0;
+}
+
+article {
+	background-color: #FFAE00;
+	height: 500px;
+	display: inline-block;
+	width: 745px;
+	margin: 0;
+}
+
+footer {
+	background-color: #FF1300;
+	clear: both;
+	height: 120px;
+}
+
+p {
+	margin: 0;
+}
