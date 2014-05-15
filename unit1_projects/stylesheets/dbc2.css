@@ -1,6 +1,8 @@
 body {
 	width: 1000px;
 	margin: auto;
+	position: relative;
+	font-family: Helvetica;
 }
 
 header {
@@ -13,24 +15,56 @@ aside {
 	background-color: #03899C;
 	width: 250px;
 	height: 500px;
-	display: inline-block;
 	margin: 0;
+	position: absolute;
+	top: 120px;
+	left: 0;
 }
 
 article {
 	background-color: #FFAE00;
 	height: 500px;
-	display: inline-block;
-	width: 745px;
-	margin: 0;
+	width: 750px;
+	position: absolute;
+	top: 120px;
+	right: 0;
+
 }
 
 footer {
 	background-color: #FF1300;
-	clear: both;
 	height: 120px;
+	width: 1000px;
+	position: absolute;
+	top: 620px;
 }
 
 p {
 	margin: 0;
+}
+
+li {
+	list-style-type: none;
+	margin: 0;
+}
+
+header > h1, footer > p {
+	margin: 0;
+	padding-top: 30px;
+	text-align: center;
+}
+
+table {
+	border: 2px solid black;
+	margin: 20px;
+	background-color: white;
+}
+
+td, th {
+	padding: 0;
+	border: 1px solid grey;
+}
+
+span {
+	background-color: #FF7A00;
 }
