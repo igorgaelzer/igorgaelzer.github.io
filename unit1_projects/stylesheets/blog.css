@@ -1,0 +1,70 @@
+body {
+	font-family: Helvetica;
+	color: #444444;
+	margin: auto;
+	margin-top: 50px;
+	margin-bottom: 100px;
+	width: 1200px;
+}
+
+.wrapper {
+	width: 600px;
+	margin-left: 350px;
+}
+
+header {
+	text-align: center;
+	position: relative;
+}
+
+aside {
+	float: left;
+	margin-top: 50px;
+	margin-left: 100px;
+	width: 200px;
+	height: 400px;
+	position: fixed;
+	top: 0px;
+}
+
+#profile-image {
+	width: 150px;
+	border-radius: 75px;
+}
+
+#blog-name-container {
+	position: absolute;
+	top: 150px;
+	width: 100%;
+}
+
+article {
+	margin-top: 50px;
+}
+
+.center {
+	text-align: center;
+}
+
+p {
+	line-height: 24px;
+}
+
+h1 {
+	font-size: 40px;
+}
+
+h3 {
+	margin-top: 30px;
+}
+
+article > img {
+	width: 100%;
+	border: 2px #eee solid;
+}
+
+.phase-week {
+	color: #ccc;
+}
+
+.contact-info

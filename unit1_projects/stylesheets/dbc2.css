@@ -14,20 +14,16 @@ header {
 aside {
 	background-color: #03899C;
 	width: 250px;
-	height: 500px;
+	height: 600px;
 	margin: 0;
-	position: absolute;
-	top: 120px;
-	left: 0;
+	float: left;
 }
 
 article {
 	background-color: #FFAE00;
-	height: 500px;
+	height: 600px;
 	width: 750px;
-	position: absolute;
-	top: 120px;
-	right: 0;
+	float: right;
 
 }
 
@@ -35,8 +31,7 @@ footer {
 	background-color: #FF1300;
 	height: 120px;
 	width: 1000px;
-	position: absolute;
-	top: 620px;
+	clear: both;
 }
 
 p {
@@ -56,8 +51,9 @@ header > h1, footer > p {
 
 table {
 	border: 2px solid black;
-	margin: 20px;
+	margin: auto;
 	background-color: white;
+	width: 400px;
 }
 
 td, th {
@@ -67,4 +63,26 @@ td, th {
 
 span {
 	background-color: #FF7A00;
+}
+
+img {
+	width: 400px;
+	height: 400px;
+	margin: 20px;
+}
+
+.picture {
+	text-align: center;
+	position: relative;
+
+}
+
+.label {
+	background-color: black;
+	padding: 0 10px;
+	position: absolute;
+	bottom: 50px;
+	left: 175px;
+	color: white;
+	font-size: 14px;
 }
