@@ -67,4 +67,13 @@ article > img {
 	color: #ccc;
 }
 
-.contact-info
+li {
+	line-height: 24px;
+}
+
+a:link, a:visited {
+	/*text-decoration: none;*/
+	font-weight: bold;
+	color: #444444;
+	tex
+}
