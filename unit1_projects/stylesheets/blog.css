@@ -77,3 +77,7 @@ a:link, a:visited {
 	color: #444444;
 	tex
 }
+
+.index-link {
+	margin-top: 15px;
+}
