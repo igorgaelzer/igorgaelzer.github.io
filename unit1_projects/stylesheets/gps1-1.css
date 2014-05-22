@@ -1,0 +1,33 @@
+body {
+    font-family: 'Merriweather', serif;
+}
+        
+article {
+    width: 80%;
+    margin: auto;
+}
+
+.programmer {
+    min-width: 200px;
+    width: 50%;
+    float: left;
+    }
+    
+.compare {
+    width: 100%;
+    background-color: #EEE;
+    display: inline-block;
+    padding: 0 40px 10px 20px;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.25em;
+}
+
+p {
+    text-align: justify;
+}

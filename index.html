@@ -1,43 +1,84 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Igor's Dev Bootcamp links</title>
+	<title>Igor's index page</title>
 	<link rel="stylesheet" type="text/css" href="unit1_projects/stylesheets/blog.css">
 </head>
 <body>
-	<aside class="center">
-		<img id="profile-image" src="unit1_projects/images/profile.jpg">
-		<p>
-			<strong>Igor Gaelzer</strong><br>
-			igor@nordweg.com
-		</p>
-	</aside>
-	<section class="wrapper" >
-	<article>
-		<h2>Technical Blog Posts</h2>
-		<ul>
-			<li>
-				<a href="unit1_projects/week1_technical_blog.html">Design and UX analysis</a><br>
-				<span class="phase-week">Phase 0, week 1 - May 17th, 2014</span>
-			</li>
-			<li class="index-link">
-				<a href="unit1_projects/wireframe_sites.html">Favorite sites wireframes</a><br>
-				<span class="phase-week">Phase 0, week 1 - May 17th, 2014</span>
-			</li>
-		</ul>
+	<header>
+		<nav class="wrapper">
+			<ul>
+				<li><a href="https://github.com/Devbootcamp/phase_0_unit_1">DBC Github</a></li>
+				<li><a href="https://socrates.devbootcamp.com">Socrates</a></li>
+				<li><a href="http://apply.devbootcamp.com/s/534475/?pl=1">Apply DBC</a></li>
+				<li><a href="https://plus.google.com/u/0/communities/112496352416987127987?cfem=1">Google+ Group</a></li>
+				<li><a href="https://www.facebook.com/groups/551601014959939/">Facebook Group</a></li>
+				<li><a href="http://devbootcamp.com">Dev Bootcamp</a></li>
+			</ul>
+		</nav>
+	</header>
+	
+	<div class="wrapper">
+		
+<!-- SIDEBAR -->
 
-		<h2>Cultural Blog Posts</h2>
-		<ul>
-			<li><a href="unit1_projects/week1_cultural_blog.html">First impressions on Dev Bootcamp`s culture</a><br>
-			<span class="phase-week">Phase 0, week 1 - May 18th, 2014</span></li>
-		</ul>
+		<aside> 
+			<img id="profile-image" src="unit1_projects/images/profile.jpg">
+			<p class="myname">Igor Gaelzer</p>
+			<p>
+				Founder and CEO<br>
+				at <a href="http://www.nordweg.com">Nordweg</a>
+			</p>
+			<p>
+				igor@nordweg.com
+			</p>
+			<p>
+				<a href="https://www.facebook.com/igorgaelzer">Facebook</a><br>
+				<a href="https://github.com/igorgaelzer">Github</a>
+			</p>
+			<p>
+				Nova Petropolis,<br>
+				Brazil
+			</p>
+		</aside>
+		
+<!-- ENDS SIDEBAR -->
 
-		<h2>Other</h2>
-		<ul>
-			<li><a href="unit1_projects/class1/practice/index.html">U1.W2: Intermediate HTML and CSS</a><br>
-			<span class="phase-week">Phase 0, week 2 - May 20th, 2014</span></li>
-		</ul>
-	</article>
-	</section>
+		<section class="posts-container">
+			
+<!-- PAGE CONTENT GOES HERE -->
+
+			<div id="index-container">
+				<h3>Week 1</h3>
+				<ul>
+					<li><a href="unit1_projects/week1_technical_blog.html">Technical Blog | Design and UX analysis</a><br>
+					<span class="date">May 17th, 2014</span></li>
+
+					<li><a href="unit1_projects/week1_cultural_blog.html">Cultural Blog | First impressions on Dev Bootcamp`s culture</a><br>
+					<span class="date">May 18th, 2014</span></li>
+					
+					<li><a href="unit1_projects/wireframe_sites.html">Favorite sites wireframes</a><br>
+					<span class="date">May 17th, 2014</span></li>
+				</ul>
+				
+
+				<h3>Week 2</h3>
+				<ul>
+					<li><a href="unit1_projects/class1/practice/index.html">Intermediate HTML and CSS</a><br>
+					<span class="date">May 20th, 2014</span></li>	
+					
+					<li><a href="unit1_projects/gps1-1.html"> GPS 1.1 | Understanding Pair Programming</a><br>
+					<span class="date">May 21st, 2014</span></li>
+
+					<li><a href="unit1_projects/my_wireframe.html"> Solo Challenge | Planning and wireframing my own site</a><br>
+					<span class="date">May 21st, 2014</span></li>
+
+				</ul>
+			</div> <!-- Ends index-container -->
+
+<!-- ENDS PAGE CONTENT -->
+
+		</section>
+	</div> <!-- Ends wrapper -->
 </body>
 </html>

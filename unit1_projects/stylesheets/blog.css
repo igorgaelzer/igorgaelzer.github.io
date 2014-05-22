@@ -1,30 +1,89 @@
+/*--- GENERAL ---*/
+
 body {
 	font-family: Helvetica;
 	color: #444444;
-	margin: auto;
-	margin-top: 50px;
+	margin-top: 80px;
 	margin-bottom: 100px;
-	width: 1200px;
 }
 
 .wrapper {
-	width: 600px;
-	margin-left: 350px;
+	max-width: 900px;
+	margin: auto;
 }
 
-header {
-	text-align: center;
-	position: relative;
+p {
+	line-height: 1.5em;
+	font-size: 1em;
 }
+
+
+.bold {
+	font-weight: bold;
+}
+
+.date {
+	color: #AAA;
+	font-size: 0.8em;
+	line-height: 1.7em;
+}
+
+
+/*--- HEADER ---*/
+
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: #444;
+}
+
+
+/* --- NAV --- */
+
+nav > ul {
+	float: right;
+	margin: 0.5em 0;
+}
+
+nav > ul > li {
+	display: inline-block;
+	margin-left: 1em;
+	color: white;
+}
+
+nav li a {
+	color: white;
+	text-decoration: none;
+	font-weight: lighter;
+	font-size: 0.8em;
+}
+
+
+/*--- ASIDE ---*/
 
 aside {
 	float: left;
-	margin-top: 50px;
-	margin-left: 100px;
+	margin-top: 20px;
 	width: 200px;
 	height: 400px;
-	position: fixed;
-	top: 0px;
+}
+
+aside .myname {
+	font-size: 1.2em;
+	font-weight: bold;
+	color: #444;
+}
+
+aside > p {
+	font-size: 0.9em;
+	color: #777;
+}
+
+aside a:link , aside a:visited {
+	font-size: 0.9em;
+	color: #777;
 }
 
 #profile-image {
@@ -32,52 +91,60 @@ aside {
 	border-radius: 75px;
 }
 
-#blog-name-container {
-	position: absolute;
-	top: 150px;
+
+/*--- INDEX CONTAINER ---*/
+
+#index-container ul li {
+	margin-top: 1em;
+}
+
+#index-container ul {
+	margin-bottom: 2em;
+	list-style-type: none;
+}
+
+
+/*--- POSTS CONTAINER ---*/
+
+.posts-container {
+	float: right;
+	max-width: 650px;
 	width: 100%;
+	margin-bottom: 100px;
 }
 
-article {
-	margin-top: 50px;
+.posts-container a:link, .posts-container a:visited {
+	font-weight: bold;
+	color: #444;
 }
 
-.center {
-	text-align: center;
-}
 
-p {
-	line-height: 24px;
-}
+/*--- ARTICLE ---*/
 
-h1 {
+article > h1 {
 	font-size: 40px;
 }
 
-h3 {
-	margin-top: 30px;
+article > h3 {
+	margin-top: 2em;
+}
+
+article > h4 {
+	margin-top: 2em;
+	margin-bottom: 10px;
+}
+
+article {
+	width: 100%;
 }
 
 article > img {
-	width: 100%;
 	border: 2px #eee solid;
+	max-width: 100%;
 }
 
-.phase-week {
-	color: #ccc;
-}
-
-li {
+article li {
 	line-height: 24px;
 }
 
-a:link, a:visited {
-	/*text-decoration: none;*/
-	font-weight: bold;
-	color: #444444;
-	tex
-}
 
-.index-link {
-	margin-top: 15px;
-}

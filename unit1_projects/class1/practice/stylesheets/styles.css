@@ -1,7 +1,7 @@
 /* General Styles */
 body {
   background-color: rgb(241, 241, 241);
-  font-size: 16px;
+  font-size: 1em;
   font-weight: 300;
   line-height: 1.2em;
   margin: 0px auto;
@@ -26,7 +26,7 @@ a:hover {
 h1 {
   font-size: 2.2em;
   float: left;
-  line-height: 75px;
+  line-height: 4.687em;
 }
 
 h2 {
@@ -34,7 +34,7 @@ h2 {
   color: #FFF;
   font-size: 2.4em;
   font-weight: 400;
-  line-height: 80px;
+  line-height: 5em;
   margin: 0 0 0.5em 0;
   text-align: center;
 }
@@ -135,9 +135,9 @@ header:after {
   width: 27.33%;
 }
 
-#famous div.break {
+/*#famous div.break {
   clear: both;
-}
+}*/
 
 #famous div img {
   display: block;
