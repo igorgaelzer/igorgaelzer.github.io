@@ -1,0 +1,39 @@
+body {
+	color: white;
+	font-family: Helvetica;
+	text-align: center;
+
+}
+
+#box1 {
+	width: 200px;
+	height:200px;
+	background-color: #479CB2;
+	position: static;
+}
+
+/*#static-box1 {
+	width: 200px;
+	height:200px;
+	position: static;
+	border: 2px dashed grey;
+	top: -50px;
+	color: grey;
+}*/
+
+#box2 {
+	width: 200px;
+	height:200px;
+	background-color: #FF548E;
+	top: 30px;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+}
+
+#box3 {
+	width: 200px;
+	height:200px;
+	background-color: #FFF585;
+	position: static;
+}

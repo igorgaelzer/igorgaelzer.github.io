@@ -1,0 +1,26 @@
+body {
+	color: white;
+	font-family: Helvetica;
+	text-align: center;
+}
+
+#box1 {
+	width: 200px;
+	height:200px;
+	background-color: #479CB2;
+	position: static;
+}
+
+#box2 {
+	width: 200px;
+	height:200px;
+	background-color: #FF548E;
+	position: static;
+}
+
+#box3 {
+	width: 200px;
+	height:200px;
+	background-color: #FFF585;
+	position: static;
+}
