@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Week 2 | Git workflow cheatsheet</title>
+	<link rel="stylesheet" type="text/css" href="stylesheets/blog.css">
+</head>
+<body>
+	<header>
+		<nav class="wrapper">
+			<ul>
+				<li><a href="https://github.com/Devbootcamp/phase_0_unit_1">DBC Github</a></li>
+				<li><a href="https://socrates.devbootcamp.com">Socrates</a></li>
+				<li><a href="http://apply.devbootcamp.com/s/534475/?pl=1">Apply DBC</a></li>
+				<li><a href="https://plus.google.com/u/0/communities/112496352416987127987?cfem=1">Google+ Group</a></li>
+				<li><a href="https://www.facebook.com/groups/551601014959939/">Facebook Group</a></li>
+				<li><a href="http://devbootcamp.com">Dev Bootcamp</a></li>
+			</ul>
+		</nav>
+	</header>
+	
+	<div class="wrapper">
+		
+<!-- SIDEBAR -->
+
+		<aside> 
+			<img id="profile-image" src="images/profile.jpg">
+			<p class="myname">Igor Gaelzer</p>
+			<p>
+				Founder and CEO<br>
+				at <a href="http://www.nordweg.com">Nordweg</a>
+			</p>
+			<p>
+				igor@nordweg.com
+			</p>
+			<p>
+				<a href="https://www.facebook.com/igorgaelzer">Facebook</a><br>
+				<a href="https://github.com/igorgaelzer">Github</a>
+			</p>
+			<p>
+				Nova Petropolis,<br>
+				Brazil
+			</p>
+		</aside>
+		
+<!-- ENDS SIDEBAR -->
+
+		<section class="posts-container">
+			
+<!-- PAGE CONTENT GOES HERE -->
+
+			<article>
+				
+			<h2>Git workflow cheatsheet</h2>
+
+			<p>
+				Using the GitHub Mac app for committing and pushing the changes in your files to the remote repository is pretty easy, but what about doing it through command line, or the Terminal, in OS X?
+			</p>
+
+			<h3>Commint changes locally</h3>
+
+			<ol>
+				<li>
+					<h4>Open the Terminal</h4>
+				</li>
+				<li>
+					<h4>Navigate to your local repository</h4> 
+					<p>For that you will use the <em>cd</em> command. According to my folder structure, the command line would be </p>
+					<p class="code-sample">$ cd Documents/igorgaelzer.github.io</p>
+				</li>
+				<li>
+					<h4>Check out the files git status</h4>
+
+					<p>For that, use the command below in your terminal.</p>
+
+					<p class="code-sample">$ cd git status</p>
+
+					<p>You should get something like this:</p>
+
+					<div id="window"> <!-- This is the Mac OS X window -->
+					 	<div id="toolbar">
+							<div class="top">
+								<div id="lights">
+									<div class="light red">
+										<div class="glyph">×</div>
+										<div class="shine"></div>
+										<div class="glow"></div>
+									</div>				
+									<div class="light yellow">
+										<div class="glyph">-</div>
+										<div class="shine"></div>
+										<div class="glow"></div>
+									</div>
+									<div class="light green">
+										<div class="glyph">+</div>
+										<div class="shine"></div>
+										<div class="glow"></div>
+									</div>
+								</div>
+								<div id="title">
+									<div class="folder">
+										<div class="tab"></div>
+										<div class="body"></div>
+									</div>
+									igorgaelzer.github.com
+								</div>
+								<div id="bubble">
+									<div class="shine"></div>
+									<div class="glow"></div>
+								</div>
+							</div>
+						</div>
+						<div id="body">
+							<!-- CONTENT GOES HERE -->
+
+							MacBook-Pro-de-Igor:igorgaelzer.github.io igorgaelzer$ git status<br>
+							# On branch master<br>
+							# Your branch is ahead of 'origin/master' by 1 commit.<br>
+							#   (use "git push" to publish your local commits)<br>
+							#<br>
+							# Changes not staged for commit:<br>
+							#   (use "git add <file>..." to update what will be committed)<br>
+							#   (use "git checkout -- <file>..." to discard changes in working directory)<br>
+							#<br>
+							#	<span class="red-text">modified:   unit1_projects/stylesheets/blog.css</span><br>
+							#<br>
+							# Untracked files:<br>
+							#   (use "git add <file>..." to include in what will be committed)<br>
+							#<br>
+							#	<span class="red-text">unit1_projects/week2_git_workflow.html</span><br>
+							no changes added to commit (use "git add" and/or "git commit -a")
+							MacBook-Pro-de-Igor:igorgaelzer.github.io igorgaelzer$<br><br><br>
+
+							<!-- CONTENT ENDS HERE -->
+							
+							<div class="cursor"></div>	
+						</div>	
+					</div>
+
+					<p>So what does this mean? In this case, it means that we have changes in two files. </p>
+					
+					<p>First shown in red is a modified file. This means that this file has already been tracked by git before and it's been modified since then.</p>
+					
+					<p>The second line in red is under <em>Untracked files</em>. This means that this file is new and has never been committed.</p>
+				</li>
+				<li> 
+					<h4>Add the files that you want to commit to the staging area</h4>
+					
+					<p>Before changes are committed to git, you have to add them to the staging area. Basically, you are telling git what files it should consider when saving the changes in the project.</p>
+
+					<p>To add a file to the staging are, use the command <em>git add</em>.</p>
+
+					<p class="code-sample">$ git add unit1_projects/week2_git_workflow.html</p>
+
+					<p>
+						Or in case there are many modified files in the project folder and you want to stage all of them, you could just add the whole project folder at once like shown below.
+					</p>
+
+					<p class="code-sample">$ git add unit1_projects</p>
+
+					<p>Now let's take another look at the files status</p>
+
+					<p class="code-sample">$ git status</p>
+
+					<p>You should get something like this:</p>
+
+					<div id="window"> <!-- This is the Mac OS X window -->
+					 	<div id="toolbar">
+							<div class="top">
+								<div id="lights">
+									<div class="light red">
+										<div class="glyph">×</div>
+										<div class="shine"></div>
+										<div class="glow"></div>
+									</div>				
+									<div class="light yellow">
+										<div class="glyph">-</div>
+										<div class="shine"></div>
+										<div class="glow"></div>
+									</div>
+									<div class="light green">
+										<div class="glyph">+</div>
+										<div class="shine"></div>
+										<div class="glow"></div>
+									</div>
+								</div>
+								<div id="title">
+									<div class="folder">
+										<div class="tab"></div>
+										<div class="body"></div>
+									</div>
+									igorgaelzer.github.com
+								</div>
+								<div id="bubble">
+									<div class="shine"></div>
+									<div class="glow"></div>
+								</div>
+							</div>
+						</div>
+						<div id="body">
+							<!-- CONTENT GOES HERE -->
+
+							MacBook-Pro-de-Igor:igorgaelzer.github.io igorgaelzer$ git status<br>
+							# On branch master<br>
+							# Your branch is ahead of 'origin/master' by 1 commit.<br>
+							#   (use "git push" to publish your local commits)<br>
+							#<br>
+							# Changes to be committed:<br>
+							#   (use "git reset HEAD <file>..." to unstage)<br>
+							#<br>
+							#	<span class="green-text">modified:   unit1_projects/stylesheets/blog.css</span><br>
+							#	<span class="green-text">new file:   unit1_projects/week2_git_workflow.html</span><br>
+
+							<!-- CONTENT ENDS HERE -->
+							
+							<div class="cursor"></div>	
+						</div>
+					</div>
+
+					<p>Now, we see that both new and modified files are under <em>Changes to be committed</em>. Thats a good sign!</p>
+
+				</li>
+				<li>
+					<h4>Committing the files in the staging area</h4>
+					<p>Now we are ready to committ the changes and save this version of the project to git, so you can later come back to it if needed.</p>
+
+					<p>Use the command <em>git commit -m 'message goes here'</em>.</p>
+
+					<p>In my case, as I'm making a change in my blog's css stylesheet so I'm going to use <em>"Changed text colors in the blog`s stylesheet"</em> as the message so I can identify this commit in the future in case I want to come back.</p>
+
+					<p class="code-sample">$ git commit -m 'Changed text colors in the blog`s stylesheet'</p>
+
+					<p>The <em>-m</em> command let's the Terminal know that the text after it is a message.</p>
+				</li>
+			</ol>
+
+			<h3>Push files to the remote repository</h3>
+
+			<h3>Fetching changes in the remote repository</h3>
+
+			</article>
+		
+<!-- ENDS PAGE CONTENT -->
+
+		</section>
+	</div> <!-- Ends wrapper -->
+</body>
+</html>
