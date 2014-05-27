@@ -64,13 +64,13 @@
 				</li>
 				<li>
 					<h4>Navigate to your local repository</h4> 
-					<p>For that you will use the <em>cd</em> command. According to my folder structure, the command line would be </p>
+					<p>Use the <em>cd</em> command. According to my folder structure, the command line would be </p>
 					<p class="code-sample">$ cd Documents/igorgaelzer.github.io</p>
 				</li>
 				<li>
-					<h4>Check out the files git status</h4>
+					<h4>Check out the git status of the files</h4>
 
-					<p>For that, use the command below in your terminal.</p>
+					<p>Use the command below in your terminal.</p>
 
 					<p class="code-sample">$ cd git status</p>
 
@@ -136,23 +136,23 @@
 						</div>	
 					</div>
 
-					<p>So what does this mean? In this case, it means that we have changes in two files. </p>
+					<p>So... what does that mean? In this case, it means that we have changes in two files. </p>
 					
-					<p>First shown in red is a modified file. This means that this file has already been tracked by git before and it's been modified since then.</p>
+					<p>The first one shown in red is a modified file. This means that it has already been tracked by git before and it's been modified since then.</p>
 					
-					<p>The second line in red is under <em>Untracked files</em>. This means that this file is new and has never been committed.</p>
+					<p>The second line in red is under <em>Untracked files</em>. This means that this file is new and it has never been committed.</p>
 				</li>
 				<li> 
 					<h4>Add the files that you want to commit to the staging area</h4>
 					
-					<p>Before changes are committed to git, you have to add them to the staging area. Basically, you are telling git what files it should consider when saving the changes in the project.</p>
+					<p>Before changes are committed to git, you have to add them to the staging area. Basically, you are telling what files git should consider when saving the changes in the project.</p>
 
 					<p>To add a file to the staging are, use the command <em>git add</em>.</p>
 
 					<p class="code-sample">$ git add unit1_projects/week2_git_workflow.html</p>
 
 					<p>
-						Or in case there are many modified files in the project folder and you want to stage all of them, you could just add the whole project folder at once like shown below.
+						Or, in case there are many modified files in the project folder and you want to stage all of them, you can just add the whole project folder at once like shown below.
 					</p>
 
 					<p class="code-sample">$ git add unit1_projects</p>
@@ -216,26 +216,373 @@
 						</div>
 					</div>
 
-					<p>Now, we see that both new and modified files are under <em>Changes to be committed</em>. Thats a good sign!</p>
+					<p>Now, we see that both new and modified files are shown in green and under <em>Changes to be committed</em>. Thats a good sign!</p>
 
 				</li>
 				<li>
-					<h4>Committing the files in the staging area</h4>
-					<p>Now we are ready to committ the changes and save this version of the project to git, so you can later come back to it if needed.</p>
+					<h4>Committing the files waiting in the staging area</h4>
+					<p>Now we are ready to committ the changes and save this version of the project to git. This way, we can roll back to it later if needed.</p>
 
 					<p>Use the command <em>git commit -m 'message goes here'</em>.</p>
 
-					<p>In my case, as I'm making a change in my blog's css stylesheet so I'm going to use <em>"Changed text colors in the blog`s stylesheet"</em> as the message so I can identify this commit in the future in case I want to come back.</p>
+					<p>In my case, as I'm making a change in my blog's css stylesheet so I'm going to use <em>"Changed text colors in the blog`s stylesheet"</em> as the message. This is an important step for identifying this commit in the future in case I want to roll back.</p>
 
 					<p class="code-sample">$ git commit -m 'Changed text colors in the blog`s stylesheet'</p>
 
-					<p>The <em>-m</em> command let's the Terminal know that the text after it is a message.</p>
+					<p>The <em>-m</em> command let's the Terminal know that the text after it is a message. Once you are done you should see a message like this:</p>
+
+					<div id="window"> <!-- This is the Mac OS X window -->
+					 	<div id="toolbar">
+							<div class="top">
+								<div id="lights">
+									<div class="light red">
+										<div class="glyph">×</div>
+										<div class="shine"></div>
+										<div class="glow"></div>
+									</div>				
+									<div class="light yellow">
+										<div class="glyph">-</div>
+										<div class="shine"></div>
+										<div class="glow"></div>
+									</div>
+									<div class="light green">
+										<div class="glyph">+</div>
+										<div class="shine"></div>
+										<div class="glow"></div>
+									</div>
+								</div>
+								<div id="title">
+									<div class="folder">
+										<div class="tab"></div>
+										<div class="body"></div>
+									</div>
+									igorgaelzer.github.com
+								</div>
+								<div id="bubble">
+									<div class="shine"></div>
+									<div class="glow"></div>
+								</div>
+							</div>
+						</div>
+						<div id="body">
+							<!-- CONTENT GOES HERE -->
+
+							MacBook-Pro-de-Igor:igorgaelzer.github.io igorgaelzer$ git commit -m 'Changed text colors in the blog`s stylesheet'<br>
+							[master 92f5ad7] Changed text colors in the blog`s stylesheet<br>
+							2 files changed, 701 insertions(+)<br>
+							create mode 100644 unit1_projects/week2_git_workflow.html<br>
+
+							<!-- CONTENT ENDS HERE -->
+							
+							<div class="cursor"></div>	
+						</div>
+					</div>
+
+					<p>It says that 2 files were changed and that is what we were expecting!</p>					
 				</li>
 			</ol>
 
-			<h3>Push files to the remote repository</h3>
+			<h3>Pushing files to the remote repository</h3>
+			<p>
+				It is a great idea pushing your changes to a cloud service like GitHub so you can work with a remote team, share your code, get help on it, access it from anywhere and have an extra backup on the cloud.
+			</p>
+				<ol>
+					<li>
+						<h4>Make sure you have GitHub installed</h4>
+						<p>If you are not sure, check out <a href="http://burnedpixel.com/blog/setting-up-git-and-github-on-your-mac/">this step-by-step article</a> on how to do it.</p>
+					</li>
+					<li>
+						<h4>Push the changes</h4>
+						<p>Make sure all changed files are in the staging area and simply use the <em>git push</em> command.</p>
+
+						<p class="code-sample">$ git push</p>
+
+						<p>Then once you are done you should see something like this:</p>
+
+						<div id="window"> <!-- This is the Mac OS X window -->
+						 	<div id="toolbar">
+								<div class="top">
+									<div id="lights">
+										<div class="light red">
+											<div class="glyph">×</div>
+											<div class="shine"></div>
+											<div class="glow"></div>
+										</div>				
+										<div class="light yellow">
+											<div class="glyph">-</div>
+											<div class="shine"></div>
+											<div class="glow"></div>
+										</div>
+										<div class="light green">
+											<div class="glyph">+</div>
+											<div class="shine"></div>
+											<div class="glow"></div>
+										</div>
+									</div>
+									<div id="title">
+										<div class="folder">
+											<div class="tab"></div>
+											<div class="body"></div>
+										</div>
+										igorgaelzer.github.com
+									</div>
+									<div id="bubble">
+										<div class="shine"></div>
+										<div class="glow"></div>
+									</div>
+								</div>
+							</div>
+							<div id="body">
+								<!-- CONTENT GOES HERE -->
+
+								MacBook-Pro-de-Igor:igorgaelzer.github.io igorgaelzer$ git push<br>
+								warning: push.default is unset; its implicit value is changing in<br>
+								Git 2.0 from 'matching' to 'simple'. To squelch this message<br>
+								and maintain the current behavior after the default changes, use:<br>
+								<br>
+								  git config --global push.default matching<br>
+								<br>
+								To squelch this message and adopt the new behavior now, use:<br>
+								<br>
+								  git config --global push.default simple<br>
+								 <br>
+								See 'git help config' and search for 'push.default' for further information.<br>
+								(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode<br>
+								'current' instead of 'simple' if you sometimes use older versions of Git)<br>
+								<br>
+								Everything up-to-date<br>
+
+								<!-- CONTENT ENDS HERE -->
+								
+								<div class="cursor"></div>	
+							</div>
+						</div>
+
+						<p>If the last line says <em>Everything up-to-date</em> we should be good!</p>
+
+					</li>
+				</ol>
 
 			<h3>Fetching changes in the remote repository</h3>
+			<p>
+				What I`m going to do now it fetching the changes in the phase_0_unit_1 repository - the one that has our DBC weekly instructions - to my local and remote repository so I can work on the latest verion.
+			</p>
+
+			<ol>
+				<li>
+					<h4>Make sure you are in the right repository</h4>
+					<p>You should be in the phase_0_unit_1 directory, which is the one we are going to fetch.</p>
+				</li>
+				<li>
+					<h4>Check out your current remote repository</h4>
+					<p>Just type in</p>
+
+					<p class="code-sample">$ git remote -v</p>
+
+					<p>and you should get something like this</p>
+
+					<div id="window"> <!-- This is the Mac OS X window -->
+					 	<div id="toolbar">
+							<div class="top">
+								<div id="lights">
+									<div class="light red">
+										<div class="glyph">×</div>
+										<div class="shine"></div>
+										<div class="glow"></div>
+									</div>				
+									<div class="light yellow">
+										<div class="glyph">-</div>
+										<div class="shine"></div>
+										<div class="glow"></div>
+									</div>
+									<div class="light green">
+										<div class="glyph">+</div>
+										<div class="shine"></div>
+										<div class="glow"></div>
+									</div>
+								</div>
+								<div id="title">
+									<div class="folder">
+										<div class="tab"></div>
+										<div class="body"></div>
+									</div>
+									igorgaelzer.github.com
+								</div>
+								<div id="bubble">
+									<div class="shine"></div>
+									<div class="glow"></div>
+								</div>
+							</div>
+						</div>
+						<div id="body">
+							<!-- CONTENT GOES HERE -->
+
+							MacBook-Pro-de-Igor:phase_0_unit_1 igorgaelzer$ git remote -v<br>
+							origin	https://github.com/igorgaelzer/phase_0_unit_1 (fetch)<br>
+							origin	https://github.com/igorgaelzer/phase_0_unit_1 (push)<br>
+
+							<!-- CONTENT ENDS HERE -->
+							
+							<div class="cursor"></div>	
+						</div>
+					</div>
+
+					<p>Alright! Looks like my remote repository is on my own GitHub account.</p>
+				</li>
+				<li>
+					<h4>Set up a new remote repository</h4>
+					<p>What we want to do now it to fetch (grab changes) made by Dev Bootcamp. This is why we have to set DBC GitHub repository as the remote.</p>
+
+					<p>To do that, type in the code below in the terminal:</p>
+
+					<p class="code-sample">$ git remote add upstream https://github.com/Devbootcamp/phase_0_unit_1.git</p>
+
+					<p>Great! Now let's make sure we have set the new remote repository correctly.</p>
+
+					<p class="code-sample">$ git remote -v</p>
+
+					<p>You should get something like this</p>
+
+					<div id="window"> <!-- This is the Mac OS X window -->
+					 	<div id="toolbar">
+							<div class="top">
+								<div id="lights">
+									<div class="light red">
+										<div class="glyph">×</div>
+										<div class="shine"></div>
+										<div class="glow"></div>
+									</div>				
+									<div class="light yellow">
+										<div class="glyph">-</div>
+										<div class="shine"></div>
+										<div class="glow"></div>
+									</div>
+									<div class="light green">
+										<div class="glyph">+</div>
+										<div class="shine"></div>
+										<div class="glow"></div>
+									</div>
+								</div>
+								<div id="title">
+									<div class="folder">
+										<div class="tab"></div>
+										<div class="body"></div>
+									</div>
+									igorgaelzer.github.com
+								</div>
+								<div id="bubble">
+									<div class="shine"></div>
+									<div class="glow"></div>
+								</div>
+							</div>
+						</div>
+						<div id="body">
+							<!-- CONTENT GOES HERE -->
+
+							MacBook-Pro-de-Igor:phase_0_unit_1 igorgaelzer$ git remote -v<br>
+							origin	https://github.com/igorgaelzer/phase_0_unit_1 (fetch)<br>
+							origin	https://github.com/igorgaelzer/phase_0_unit_1 (push)<br>
+							upstream	https://github.com/Devbootcamp/phase_0_unit_1.git (fetch)<br>
+							upstream	https://github.com/Devbootcamp/phase_0_unit_1.git (push)<br>
+
+							<!-- CONTENT ENDS HERE -->
+							
+							<div class="cursor"></div>	
+						</div>
+					</div>
+
+				</li>
+				<li>
+					<h4>We are now ready to fetch the changes!</h4>
+					<p>It's finally time to grab the changes made in the DBC`s repository. This should bring the changes to a special branch in our local repository and it`s important to know that they are not merged yet.</p>
+
+					<p class="code-sample">$ git fetch upstream</p>
+
+					<p>You should get something like this</p>
+
+					<div id="window"> <!-- This is the Mac OS X window -->
+					 	<div id="toolbar">
+							<div class="top">
+								<div id="lights">
+									<div class="light red">
+										<div class="glyph">×</div>
+										<div class="shine"></div>
+										<div class="glow"></div>
+									</div>				
+									<div class="light yellow">
+										<div class="glyph">-</div>
+										<div class="shine"></div>
+										<div class="glow"></div>
+									</div>
+									<div class="light green">
+										<div class="glyph">+</div>
+										<div class="shine"></div>
+										<div class="glow"></div>
+									</div>
+								</div>
+								<div id="title">
+									<div class="folder">
+										<div class="tab"></div>
+										<div class="body"></div>
+									</div>
+									igorgaelzer.github.com
+								</div>
+								<div id="bubble">
+									<div class="shine"></div>
+									<div class="glow"></div>
+								</div>
+							</div>
+						</div>
+						<div id="body">
+							<!-- CONTENT GOES HERE -->
+
+							MacBook-Pro-de-Igor:phase_0_unit_1 igorgaelzer$ git fetch upstream<br>
+							From https://github.com/Devbootcamp/phase_0_unit_1<br>
+							 * [new branch]      final-033014 -> upstream/final-033014<br>
+							 * [new branch]      final-04202014 -> upstream/final-04202014<br>
+							 * [new branch]      master     -> upstream/master<br>
+							 * [new branch]      revamp_week_1 -> upstream/revamp_week_1<br>
+
+							<!-- CONTENT ENDS HERE -->
+							
+							<div class="cursor"></div>	
+						</div>
+					</div>
+
+					<p>The fetched files will be stored in your local branch called <em>upstream/master</em>, waiting to be merged with your files. If you want to see these files you can use the command below.</p>
+
+					<p class="code-sample">$ git branch -va</p>
+				</li>
+				<li>
+					<h4>Merge the changes</h4>
+					<p>First, make sure you are on your master branch.</p>
+
+					<p class="code-sample">$ git branch</p> 
+					<p>or</p>
+					<p class="code-sample">$ git checkout master</p>
+
+					<p>Now let's merge the changes. Don't worry, this won't make you lose the changes you made on your own files.</p>
+
+					<p class="code-sample">$ git merge upstream/master</p>
+
+				</li>
+				<li>
+					<h4>Commit and sync your new local changes to your own remote repository</h4>
+					<p>Now it's time to get these new updated files to your own GitHub account in the cloud.</p>
+
+					<p class="code-sample">$ git commit -m "added Devbootcamp's changes"</p>
+
+					<p>and then</p>
+
+					<p class="code-sample">$ git push origin master</p>
+
+					<p><em>Origin</em> refers to your local repository and <em>master</em> refers to the master branch on your github.com forked repository.</p>
+
+					<p>Your new updated files should now be in your github.com account!</p>
+
+				</li>
+					
+			</ol>
 
 			</article>
 		
