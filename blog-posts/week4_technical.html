@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Week 4 | Technical Blog</title>
+	<link rel="stylesheet" type="text/css" href="stylesheets/blog.css">
+</head>
+<body>
+	<header>
+		<nav class="wrapper">
+			<ul>
+				<li><a href="https://github.com/Devbootcamp/phase_0_unit_1">DBC Github</a></li>
+				<li><a href="https://socrates.devbootcamp.com">Socrates</a></li>
+				<li><a href="http://apply.devbootcamp.com/s/534475/?pl=1">Apply DBC</a></li>
+				<li><a href="https://plus.google.com/u/0/communities/112496352416987127987?cfem=1">Google+ Group</a></li>
+				<li><a href="https://www.facebook.com/groups/551601014959939/">Facebook Group</a></li>
+				<li><a href="http://devbootcamp.com">Dev Bootcamp</a></li>
+			</ul>
+		</nav>
+	</header>
+	
+	<div class="wrapper">
+		
+<!-- SIDEBAR -->
+
+		<aside> 
+			<img id="profile-image" src="images/profile.jpg">
+			<p class="myname">Igor Gaelzer</p>
+			<p>
+				Founder and CEO<br>
+				at <a href="http://www.nordweg.com">Nordweg</a>
+			</p>
+			<p>
+				igor@nordweg.com
+			</p>
+			<p>
+				<a href="https://www.facebook.com/igorgaelzer">Facebook</a><br>
+				<a href="https://github.com/igorgaelzer">Github</a>
+			</p>
+			<p>
+				Nova Petropolis,<br>
+				Brazil
+			</p>
+		</aside>
+		
+<!-- ENDS SIDEBAR -->
+
+		<section class="posts-container">
+			
+<!-- PAGE CONTENT GOES HERE -->
+
+			<article>
+				
+				<h2>The enumerable#map Ryby method</h2>
+				<span class="date">Phase 0, week 4 - June 8th, 2014</span>
+				<p>Enumerable#map is a very usefull Ruby method that basically iterate over each element of an array and call a block on that element and add them to an output array</p>
+				<p>There are two ways to use the map mathod - <em>map</em> and <em>map!</em>. Map will create a new array as the output, while map! will change the source array, and that is called a destructive method.</em></p>
+
+				<p>How to use the map method:</p>
+
+				<div class="code-sample">
+					<p>
+						numbers = [3, 5, 1, 15] <br>
+						double = numbers.map{ |n| n * 2} <br>
+						print double <br>
+						<br>
+						=> [6, 10, 2, 30]
+					</p>
+				</div>
+
+				<p>Or you could use the distructive method and change the source array instead of creating a new one to hold the values.</p>
+
+				<div class="code-sample">
+					<p>
+						numbers = [3, 5, 1, 15] <br>
+						numbers.map!{ |n| n * 2} <br>
+						print numbers <br>
+						<br>
+						=> [6, 10, 2, 30]
+					</p>
+				</div>
+
+			</article>
+		
+<!-- ENDS PAGE CONTENT -->
+
+		</section>
+	</div> <!-- Ends wrapper -->
+</body>
+</html>
