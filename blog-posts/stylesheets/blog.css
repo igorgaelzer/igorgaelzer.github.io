@@ -160,6 +160,23 @@ article li {
 	font-family: "Courier New";
 }
 
+.code-comment {
+    color: #BBB;
+    font-style: italic;
+}
+
+.p2 {
+    margin-left: 20px;
+}
+
+.p3 {
+    margin-left: 40px;
+}
+
+.p4 {
+    margin-left: 60px;
+}
+
 
 /*--- TERMINAL WINDOW ---*/
 

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Week 5 | Technical Blog</title>
+	<link rel="stylesheet" type="text/css" href="stylesheets/blog.css">
+</head>
+<body>
+	<header>
+		<nav class="wrapper">
+			<ul>
+				<li><a href="https://github.com/Devbootcamp/phase_0_unit_1">DBC Github</a></li>
+				<li><a href="https://socrates.devbootcamp.com">Socrates</a></li>
+				<li><a href="http://apply.devbootcamp.com/s/534475/?pl=1">Apply DBC</a></li>
+				<li><a href="https://plus.google.com/u/0/communities/112496352416987127987?cfem=1">Google+ Group</a></li>
+				<li><a href="https://www.facebook.com/groups/551601014959939/">Facebook Group</a></li>
+				<li><a href="http://devbootcamp.com">Dev Bootcamp</a></li>
+			</ul>
+		</nav>
+	</header>
+	
+	<div class="wrapper">
+		
+<!-- SIDEBAR -->
+
+		<aside> 
+			<img id="profile-image" src="images/profile.jpg">
+			<p class="myname">Igor Gaelzer</p>
+			<p>
+				Founder and CEO<br>
+				at <a href="http://www.nordweg.com">Nordweg</a>
+			</p>
+			<p>
+				igor@nordweg.com
+			</p>
+			<p>
+				<a href="https://www.facebook.com/igorgaelzer">Facebook</a><br>
+				<a href="https://github.com/igorgaelzer">Github</a>
+			</p>
+			<p>
+				Nova Petropolis,<br>
+				Brazil
+			</p>
+		</aside>
+		
+<!-- ENDS SIDEBAR -->
+
+		<section class="posts-container">
+			
+<!-- PAGE CONTENT GOES HERE -->
+
+			<article>
+				
+				<h2>About Classes in Ruby</h2>
+				<spam class="date">Phase 0, week 5 - June 13th, 2014</spam>
+				<p>
+					Classes - and methods - are basically chunks of code that can be reused later just by calling their name anywhere in the code, which is a great way to avoid repeting code that is ran often in your app. Classes, themselves, are groups of methods that work together to get a certain output from a previous input.
+				</p>
+				<p>
+					Once you call a method, you have to pass it the input and, after it runs, you should get the output desired. It could be a number in a different format or a true/false statement confirming that a number or an answer is valid or not, for example.
+				</p>
+				<p>
+					Methods and classes are great because they are like tools you can build on your own. So let's say we are working on a trivia game and, after every answer the user inputs, the app has to check if the answer is true or not and return a praise or a "try again" message to the user. You wouldn't want to reapeat that code again and again after every question in the game, that just wouldn't be a <a href="http://en.wikipedia.org/wiki/Don't_repeat_yourself">DRY code</a>.
+				</p>
+				<p>
+					In this situation, you could create a <em>Check_answer</em> method that will do all the work every time the user answers a question.
+				</p>
+
+				<h3>Creating a Class</h3>
+				<p>
+					Creating a Class is super easy. You just have to write <em>class</em> and then give it a name. Of course, you have to close it wih an <em>end</em> tag, then the code that is going to be repeated everytime the class is called is going right between those lines, just as shown below.
+				</p>
+				<div class="code-sample">
+					<p>
+						class TheNameYouLike<br>
+						<em>... your repeatable code goes here</em><br>
+						end
+					</p>
+				</div>
+
+				<h4>Instance Variables</h4>
+				<p>
+					As you may know, variables inside methods - or local variables - are not accessible from outside themselves. As a class is basically a group os methods, however, you can define instance variables when you need them to be accessible anywhere inside the class, by any of the methods.
+				</p>
+				<p>
+					Instance variables necessarily need to start with an @ sign.
+				</p>
+
+				<div class="code-sample">
+					<p>
+						class TheNameYouLike(input)<br>
+							<span class="p2">def initialize</span><br>
+							<span class="p3">@num = input</span> <span class="code-comment"># Makes input from class be available to all methods inside it as @num</span><br>
+							<span class="p2">end</span><br>
+							<br>
+							<span class="p2">def myMethod1</span><br>
+							<span class="p3">return @number * 2</span> <span class="code-comment"># Gets @num - or the class input - and returns it multiplied by two</span><br>
+							<span class="p2">end</span><br>
+						end
+					</p>
+				</div>
+
+				<p>
+					The <em>input</em> could be anything - an integer, string, array, hash... - and this is how you feed information into your class so it can do the computations and return your desired output.
+				</p>
+
+				<h3>Calling a Class</h3>
+				<p>
+					Considering the class created above, you would define a new variable that is going to point at the class, just as shown below.
+				</p>
+				
+				<div class="code-sample">
+					<p>
+						doubled_value = TheNameYouLike.new(23) <span class="code-comment"># Creates "doubled_value" variable that is pointing to the TheNameYouLike class</span><br>
+						double_value.myMethod1 <span class="code-comment"># Applies myMethod1 to double_value</span><br>
+					</p>
+					<p>
+						<span class="code-comment"># returns => 46</span>
+					</p>
+				</div>
+
+
+			</article>
+		
+<!-- ENDS PAGE CONTENT -->
+
+		</section>
+	</div> <!-- Ends wrapper -->
+</body>
+</html>
