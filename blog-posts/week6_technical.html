@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Week 6 | Technical Blog</title>
+	<link rel="stylesheet" type="text/css" href="stylesheets/blog.css">
+</head>
+<body>
+	<header>
+		<nav class="wrapper">
+			<ul>
+				<li><a href="https://github.com/Devbootcamp/phase_0_unit_1">DBC Github</a></li>
+				<li><a href="https://socrates.devbootcamp.com">Socrates</a></li>
+				<li><a href="http://apply.devbootcamp.com/s/534475/?pl=1">Apply DBC</a></li>
+				<li><a href="https://plus.google.com/u/0/communities/112496352416987127987?cfem=1">Google+ Group</a></li>
+				<li><a href="https://www.facebook.com/groups/551601014959939/">Facebook Group</a></li>
+				<li><a href="http://devbootcamp.com">Dev Bootcamp</a></li>
+			</ul>
+		</nav>
+	</header>
+	
+	<div class="wrapper">
+		
+<!-- SIDEBAR -->
+
+		<aside> 
+			<img id="profile-image" src="images/profile.jpg">
+			<p class="myname">Igor Gaelzer</p>
+			<p>
+				Founder and CEO<br>
+				at <a href="http://www.nordweg.com">Nordweg</a>
+			</p>
+			<p>
+				igor@nordweg.com
+			</p>
+			<p>
+				<a href="https://www.facebook.com/igorgaelzer">Facebook</a><br>
+				<a href="https://github.com/igorgaelzer">Github</a>
+			</p>
+			<p>
+				Nova Petropolis,<br>
+				Brazil
+			</p>
+		</aside>
+		
+<!-- ENDS SIDEBAR -->
+
+		<section class="posts-container">
+			
+<!-- PAGE CONTENT GOES HERE -->
+
+			<article>
+				
+				<h2>Ruby Variable Scope</h2>
+				<spam class="date">Phase 0, week 6 - June 23rd, 2014</spam>
+				<p>
+					Ruby has four types of variables: <em>local</em>, <em>global</em>, <em>instance</em> and <em>class</em>.
+				</p>
+				<p>
+					These variables are represented in different ways and they are accesible in different parts of the code. Let's go through each of them below.
+				</p>
+				<h3>
+					Local Variables
+				</h3>
+				<p>
+					Local variables can start with any lower case letter or an underline and can be accessed only in the code construct they were defined in. So if you create a variable inside a if or while loop, or inside a method or class, that local variable will only be recognized in thouse places.
+				</p>
+
+				<div class="code-sample">
+					<p>local_variable = "This is a local variable"</p>
+				</div>
+				
+				<h3>
+					Global Variables
+				</h3>
+				<p>
+					Global variables always start with a $ sign. When Ruby sees a variable like $thisone, it'll make sure it's available all over the code, to any loop, method, class or any other code construct you may use.
+				</p>
+
+				<div class="code-sample">
+					<p>$global = "This is a global variable"</p>
+				</div>
+
+				<h3>
+					Instance Variables
+				</h3>
+				<p>
+					Instance variables always start with a @ sign and they are accessible only inside the instance of an object. If a class has different objects, changing a instance variable will only change it in that instance. Other objects of that class will have local copies of the values and won't be affected.
+				</p>
+
+				<div class="code-sample">
+					<p>@instance_variable = "This is a instance variable"</p>
+				</div>
+
+				<h3>
+					Class Variables
+				</h3>
+				<p>
+					Class variables start with @@ and they are accessible in all instances of a class, so updating it's value in one object of a class will update it in all the other instances. A class variable could be seen as a global variable, but only inside a class.
+				</p>
+				<div class="code-sample">
+					<p>@class_variable = "This is a class variable"</p>
+				</div>
+
+				<h3>
+					Pseudo Variables
+				</h3>
+				<p>
+					Ruby also has two pseudo-variables that can not be assigned values. These are <em>nil</em>, which is assigned automatically to variables that have not yet been initialized, and <em>self</em>, which is a variable that refers to the object a class is currently being applyed to.
+				</p>
+
+			</article>
+		
+<!-- ENDS PAGE CONTENT -->
+
+		</section>
+	</div> <!-- Ends wrapper -->
+</body>
+</html>
