@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Week 7 | Technical Blog</title>
+	<link rel="stylesheet" type="text/css" href="stylesheets/blog.css">
+</head>
+<body>
+	<header>
+		<nav class="wrapper">
+			<ul>
+				<li><a href="https://github.com/Devbootcamp/phase_0_unit_1">DBC Github</a></li>
+				<li><a href="https://socrates.devbootcamp.com">Socrates</a></li>
+				<li><a href="http://apply.devbootcamp.com/s/534475/?pl=1">Apply DBC</a></li>
+				<li><a href="https://plus.google.com/u/0/communities/112496352416987127987?cfem=1">Google+ Group</a></li>
+				<li><a href="https://www.facebook.com/groups/551601014959939/">Facebook Group</a></li>
+				<li><a href="http://devbootcamp.com">Dev Bootcamp</a></li>
+			</ul>
+		</nav>
+	</header>
+	
+	<div class="wrapper">
+		
+<!-- SIDEBAR -->
+
+		<aside> 
+			<img id="profile-image" src="images/profile.jpg">
+			<p class="myname">Igor Gaelzer</p>
+			<p>
+				Founder and CEO<br>
+				at <a href="http://www.nordweg.com">Nordweg</a>
+			</p>
+			<p>
+				igor@nordweg.com
+			</p>
+			<p>
+				<a href="https://www.facebook.com/igorgaelzer">Facebook</a><br>
+				<a href="https://github.com/igorgaelzer">Github</a>
+			</p>
+			<p>
+				Nova Petropolis,<br>
+				Brazil
+			</p>
+		</aside>
+		
+<!-- ENDS SIDEBAR -->
+
+		<section class="posts-container">
+			
+<!-- PAGE CONTENT GOES HERE -->
+
+			<article>
+				
+				<h2>Comparing SQL databases with NoSQL databases</h2>
+				<spam class="date">Phase 0, week 7 - June 29th, 2014</spam>
+				<p>
+				SQL databases are the standart today. They have brought many benifits to the world and made managing databases much more simple and quick. However, with the evolutions of technology and problems getting more and more complex, SQL lacks flexibility at times. Let's compare SQL and NoSQL databases below.
+				</p>
+				<p>
+					SQL is a relational database while NoSQL is a non-relational database. That means that SQL is structured in columns and rows that relate and gather data from different tables, ralations that can be represented in a schema, while NoSQL databases are more dynamic, based in documents, graph databases or wide-column stores that do not need to follow a stardart schema.
+				</p>
+				<p>
+					SQL databases work great in one machine, but it has trouble when it has to work on multiple computers at the same time, like happens in big server farms that hold our cloud applications we use everyday. NoSQL fits thouse needs better.
+				</p>
+				<p>
+					Some SQL database examples are MySql, Oracle, Sqlite, Postgres and MS-SQL. NoSQL database examples are MongoDB, BigTable, Redis, RavenDb, Cassandra, Hbase, Neo4j and CouchDb.
+				</p>
+
+				<p>
+					You can read more about the differences between SQL and NoSQL databases and see examples <a href="http://www.thegeekstuff.com/2014/01/sql-vs-nosql-db/">here</a>.
+				</p>
+
+			</article>
+		
+<!-- ENDS PAGE CONTENT -->
+
+		</section>
+	</div> <!-- Ends wrapper -->
+</body>
+</html>
