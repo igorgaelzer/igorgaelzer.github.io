@@ -1,0 +1,24 @@
+body {
+	background-image: url(images/bg-texture.png);
+	background-color: #DDD;
+	font-family: Helvetica;
+}
+
+#wrapper {
+	width: 700px;
+	background-color: white;
+	margin: auto;
+	margin-top: 50px;
+	padding: 50px;
+	box-shadow: 3px 3px 10px #888888;
+}
+
+h1 {
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+h3 {
+	margin-top: 25px;
+	margin-bottom: 5px;
+}
